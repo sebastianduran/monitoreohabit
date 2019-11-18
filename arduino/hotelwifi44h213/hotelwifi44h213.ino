@@ -10,9 +10,9 @@
 #define D6T_cmd 0x4C
 // Set these to run example de firebase.
 #define FIREBASE_HOST "hotelkensyadmin.firebaseio.com"
-#define FIREBASE_AUTH " //Aqui va la clave secreta
-#define WIFI_SSID "  //nombre de la red wifi entre comillas
-#define WIFI_PASSWORD " //contrasena de la red wifi
+#define FIREBASE_AUTH " "//Aqui va la clave secreta
+#define WIFI_SSID " " //nombre de la red wifi entre comillas
+#define WIFI_PASSWORD " " //contrasena de la red wifi
  
 int  rbuf[35];
 int  TDATA[4][4];
