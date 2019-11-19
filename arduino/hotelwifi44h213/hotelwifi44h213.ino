@@ -9,10 +9,10 @@
 #define D6T_addr 0x0A
 #define D6T_cmd 0x4C
 // Set these to run example de firebase.
-#define FIREBASE_HOST "hotelkensyadmin.firebaseio.com"
-#define FIREBASE_AUTH " "//Aqui va la clave secreta
-#define WIFI_SSID " " //nombre de la red wifi entre comillas
-#define WIFI_PASSWORD " " //contrasena de la red wifi
+#define FIREBASE_HOST "hotelkensybog-4dcec.firebaseio.com"
+#define FIREBASE_AUTH "516zmRDbfpvjTs5wfnS2EwzbG0Mz72UDqWYKx62x"//Aqui va la clave secreta
+#define WIFI_SSID "Hotel Kensy" //nombre de la red wifi entre comillas
+#define WIFI_PASSWORD "hotel2020" //contrasena de la red wifi
  
 int  rbuf[35];
 int  TDATA[4][4];
@@ -47,13 +47,14 @@ void loop()
   int  y = 0 ;
   int writeStatus;
 
-  Wire.beginTransmission(0x0A);
-  Wire.write(0x4C);
+  Wire.beginTransmission(D6T_addr);
+  Wire.write(D6T_cmd);
 
-  writeStatus = Wire.endTransmission(false);
+  writeStatus = Wire.endTransmission();
   if(writeStatus != 0)
   {
-    Serial.println("Writing failed");
+    Serial.print(writeStatus);
+    Serial.println(" Writing failed");
     return;
     delay(1000);
   }
@@ -62,7 +63,7 @@ void loop()
   
   delay(100);
   
-  Wire.requestFrom(0x0A, 35);
+  Wire.requestFrom(D6T_addr, 35);
   for  (z  =  0 ;  z  <  35 ;  z++)
   {
     rbuf [z]  =  Wire.read();
