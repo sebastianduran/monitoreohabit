@@ -14,6 +14,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="2dp"
             android:orientation="vertical">
 
             <TextView
@@ -32,7 +33,134 @@
                 android:background="@color/colorNoPresencia"
                 android:text="" />
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="2dp">
 
+            <TextView
+                android:id="@+id/habitacion_213"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20dp"
+                android:text="213" />
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/hab213_m00"
+                    android:layout_width="@dimen/doth"
+                    android:layout_height="@dimen/doth"
+                    android:background="@color/colorNoPresencia"
+                    android:text="" />
+                <Button
+                    android:id="@+id/hab213_m01"
+                    android:layout_width="@dimen/doth"
+                    android:layout_height="@dimen/doth"
+                    android:background="@color/colorNoPresencia"
+                    android:text="" />
+                <Button
+                    android:id="@+id/hab213_m02"
+                    android:layout_width="@dimen/doth"
+                    android:layout_height="@dimen/doth"
+                    android:background="@color/colorNoPresencia"
+                    android:text="" />
+                <Button
+                    android:id="@+id/hab213_m03"
+                    android:layout_width="@dimen/doth"
+                    android:layout_height="@dimen/doth"
+                    android:background="@color/colorNoPresencia"
+                    android:text="" />
+            </GridLayout>
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/hab213_m10"
+                    android:layout_width="@dimen/doth"
+                    android:layout_height="@dimen/doth"
+                    android:background="@color/colorNoPresencia"
+                    android:text="" />
+                <Button
+                    android:id="@+id/hab213_m11"
+                    android:layout_width="@dimen/doth"
+                    android:layout_height="@dimen/doth"
+                    android:background="@color/colorNoPresencia"
+                    android:text="" />
+                <Button
+                    android:id="@+id/hab213_m12"
+                    android:layout_width="@dimen/doth"
+                    android:layout_height="@dimen/doth"
+                    android:background="@color/colorNoPresencia"
+                    android:text="" />
+                <Button
+                    android:id="@+id/hab213_m13"
+                    android:layout_width="@dimen/doth"
+                    android:layout_height="@dimen/doth"
+                    android:background="@color/colorNoPresencia"
+                    android:text="" />
+            </GridLayout>
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/hab213_m20"
+                    android:layout_width="@dimen/doth"
+                    android:layout_height="@dimen/doth"
+                    android:background="@color/colorNoPresencia"
+                    android:text="" />
+                <Button
+                    android:id="@+id/hab213_m21"
+                    android:layout_width="@dimen/doth"
+                    android:layout_height="@dimen/doth"
+                    android:background="@color/colorNoPresencia"
+                    android:text="" />
+                <Button
+                    android:id="@+id/hab213_m22"
+                    android:layout_width="@dimen/doth"
+                    android:layout_height="@dimen/doth"
+                    android:background="@color/colorNoPresencia"
+                    android:text="" />
+                <Button
+                    android:id="@+id/hab213_m23"
+                    android:layout_width="@dimen/doth"
+                    android:layout_height="@dimen/doth"
+                    android:background="@color/colorNoPresencia"
+                    android:text="" />
+            </GridLayout>
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/hab213_m30"
+                    android:layout_width="@dimen/doth"
+                    android:layout_height="@dimen/doth"
+                    android:background="@color/colorNoPresencia"
+                    android:text="" />
+                <Button
+                    android:id="@+id/hab213_m31"
+                    android:layout_width="@dimen/doth"
+                    android:layout_height="@dimen/doth"
+                    android:background="@color/colorNoPresencia"
+                    android:text="" />
+                <Button
+                    android:id="@+id/hab213_m32"
+                    android:layout_width="@dimen/doth"
+                    android:layout_height="@dimen/doth"
+                    android:background="@color/colorNoPresencia"
+                    android:text="" />
+                <Button
+                    android:id="@+id/hab213_m33"
+                    android:layout_width="@dimen/doth"
+                    android:layout_height="@dimen/doth"
+                    android:background="@color/colorNoPresencia"
+                    android:text="" />
+            </GridLayout>
+        </LinearLayout>
 
     </GridLayout>
 

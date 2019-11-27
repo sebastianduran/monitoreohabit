@@ -10,14 +10,13 @@
 #define D6T_cmd 0x4C
 // Set these to run example de firebase.
 #define FIREBASE_HOST "hotelkensyadmin.firebaseio.com"
-#define FIREBASE_AUTH "DPSDHIR9TmmdztZPQXgEKfM4XhegKXv46HlUeayT"//Aqui va la clave secreta
-#define WIFI_SSID "Hotel Kensy" //nombre de la red wifi entre comillas
-#define WIFI_PASSWORD "hotel2020" //contrasena de la red wifi
+#define FIREBASE_AUTH " //Aqui va la clave secreta
+#define WIFI_SSID "  //nombre de la red wifi entre comillas
+#define WIFI_PASSWORD " //contrasena de la red wifi
  
 int  rbuf[35];
 int  TDATA[4][4];
-int  ANDATA[4][4];
-float PTAT;
+int  PTAT;
  
 void setup()
 {
@@ -48,43 +47,42 @@ void loop()
   int  y = 0 ;
   int writeStatus;
 
-  Wire.beginTransmission(D6T_addr);
-  Wire.write(D6T_cmd);
+  Wire.beginTransmission(0x0A);
+  Wire.write(0x4C);
 
-  writeStatus = Wire.endTransmission();
+  writeStatus = Wire.endTransmission(false);
   if(writeStatus != 0)
   {
-    Serial.print(writeStatus);
-    Serial.println(" Writing failed");
+    Serial.println("Writing failed");
     return;
     delay(1000);
   }
   
+  Serial.println("writing succeeded");
   
   delay(100);
   
-  Wire.requestFrom(D6T_addr, 35);
+  Wire.requestFrom(0x0A, 35);
   for  (z  =  0 ;  z  <  35 ;  z++)
   {
     rbuf [z]  =  Wire.read();
   }
+  
+  PTAT = (rbuf[0]+(rbuf[1] << 8));
 
   for(x = 3 ;  x  >=  0 ; x--)
   {
     for(y = 3 ;  y >= 0 ; y--)
     {
       TDATA [x][y] = (rbuf [((x + y*4) * 2 + 2)] + ( rbuf [((x + y*4) * 2 + 3)] << 8 ));
-      PTAT = TDATA[x][y] *0.1;
-      Serial.print(PTAT, DEC);
+      Serial.print(TDATA[x][y], DEC);
       Serial.print(" ");
-      if (ANDATA == TDATA){
-        Firebase.setFloat("ocupacion/213/"+(String)x+(String)y,PTAT);
-      }
-      ANDATA[x][y] = TDATA[x][Y];
+      Firebase.setInt("ocupacion/213/"+(String)x+(String)y,TDATA[x][y]);
     }
   }
   
   Serial.println(" ");
+  Serial.println(PTAT);
   delay(1000);
   
 }
